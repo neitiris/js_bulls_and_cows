@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#logo__img {
+  display: block;
+  margin: auto;
+}
+
+.input__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#result__text-area {
+  text-align: center;
+  width: 100%;
+}
+
+.space {
+  margin-left: 10px;
+}
+
+.btn {
+  height: 30px;
+  width: 90px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid;
+  opacity: unset;
+  outline: none;
+}
+
+#checkBtn {
+  background: lawngreen;
+}
+
+#restartBtn {
+  background: orange;
+}
+
+#logo__img, .input__block {
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */

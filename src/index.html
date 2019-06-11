@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="lets__play">
+  <img id="logo__img" src="./img/logo.jpg" alt="Bulls and Cows">
+  <form>
+    <article class="input__block">
+      <label for="user__input">
+        Enter number here:
+      </label>
+      <input type="text" id="user__input" class="space"/>
+      <button id="checkBtn" class="space btn" onclick="checkInput()">Check</button>
+      <button id="restartBtn" class="space btn" onclick="reload()">Restart</button>
+    </article>
+    <textarea id="result__text-area" rows="20" cols="30" readonly="readonly"></textarea>
+  </form>
+</div>
+<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
