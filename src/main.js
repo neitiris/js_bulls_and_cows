@@ -45,7 +45,7 @@ function checkInput() {
     }
 
     if (bull === 0 && cow === 0) {
-      console.log (bull + " bull(s), " + cow + " cow(s)!");
+      console.log(bull + " bull(s), " + cow + " cow(s)!");
       setText.innerHTML += "try again\n\n";
     } else if (bull === 4) {
       setText.innerHTML += 4 + " bulls! you won the game!!!\nclick restart to play again\n\n";
