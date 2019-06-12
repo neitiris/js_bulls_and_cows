@@ -5,7 +5,7 @@ body {
   height: 100%;
 }
 
-#logo__img {
+.logo {
   display: block;
   margin: auto;
 }
@@ -16,7 +16,7 @@ body {
   align-items: center;
 }
 
-#result__text-area {
+.text-area {
   text-align: center;
   width: 100%;
 }
@@ -36,15 +36,15 @@ body {
   outline: none;
 }
 
-#checkBtn {
+.check__btn {
   background: lawngreen;
 }
 
-#restartBtn {
+.restart__btn {
   background: orange;
 }
 
-#logo__img, .input__block {
+.logo, .input__block {
   margin-bottom: 10px;
 }
 
