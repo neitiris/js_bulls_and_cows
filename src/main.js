@@ -8,23 +8,35 @@ window.onload = function () {
 };
 
 function onStart() {
-  let first = Math.floor(Math.random() * 9).toString();
-  let second = Math.floor(Math.random() * 9).toString();
-  let third = Math.floor(Math.random() * 9).toString();
-  let fourth = Math.floor(Math.random() * 9).toString();
-  generatedNum = first + second + third + fourth;
-  console.log(generatedNum);
-  return 0;
+  let numArr = [];
+  while (numArr.length <4) {
+    let num = Math.floor(Math.random() * 9).toString()
+    if (numArr.indexOf(num) < 0) {
+      numArr.push(num)
+    }
+  }
+  generatedNum = numArr.join('');
+  console.log ('generatedNum', generatedNum)
 }
+
 
 function checkInput() {
   let input = document.getElementById("user__input").value;
   let setText = document.getElementById("result__text-area");
 
+  function charCheck(str) {
+    for (let i = 0; i < str.length; i++) {
+      if (str.split(str[i]).length - 1 > 1) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   for (let i = 0; i < input.length; i++) {
     if (input.charCodeAt(i) < 48 || input.charCodeAt(i) > 57
-      || input.length !== 4) {
-      setText.innerHTML += "Type only " + 4 + " numbers!\n";
+      || input.length !== 4 || charCheck(input)) {
+      setText.innerHTML += "Type only " + 4 + " different numbers!\n";
       check = false;
       break;
     }
