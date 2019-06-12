@@ -8,21 +8,21 @@ window.onload = function () {
 };
 
 function onStart() {
-  let numArr = [];
-  while (numArr.length <4) {
+  const numArr = [];
+  while (numArr.length < 4) {
     let num = Math.floor(Math.random() * 9).toString()
     if (numArr.indexOf(num) < 0) {
       numArr.push(num)
     }
   }
   generatedNum = numArr.join('');
-  console.log ('generatedNum', generatedNum)
+  console.log('generatedNum', generatedNum)
 }
 
 
 function checkInput() {
-  let input = document.getElementById("user__input").value;
-  let setText = document.getElementById("result__text-area");
+  const input = document.getElementById("user__input").value; //винесення констант з функції ламає код
+  const setText = document.getElementById("result__text-area");
 
   function charCheck(str) {
     for (let i = 0; i < str.length; i++) {
@@ -34,9 +34,12 @@ function checkInput() {
   }
 
   for (let i = 0; i < input.length; i++) {
-    if (input.charCodeAt(i) < 48 || input.charCodeAt(i) > 57
-      || input.length !== 4 || charCheck(input)) {
-      setText.innerHTML += "Type only " + 4 + " different numbers!\n";
+    if (
+      input.charCodeAt(i) < 48
+      || input.charCodeAt(i) > 57
+      || input.length !== 4 || charCheck(input)
+    ) {
+      setText.innerHTML += "Type only " + 4 + " different numbers!\n\n";
       check = false;
       break;
     }
