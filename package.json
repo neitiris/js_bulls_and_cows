@@ -36,7 +36,6 @@
         "git add"
       ],
       "*.html": [
-        "htmllint --rc  ./node_modules/@mate-academy/htmllint-config/.htmllintrc",
         "git add"
       ]
     },
